@@ -1,9 +1,12 @@
 import puppeteer from 'puppeteer-core'
+import { env } from '~/env.mjs'
+
+
 
 export const fetchProducts = async()=>{
 
 
-        const auth = "brd-customer-hl_5af81365-zone-zone1:gktp04d6697k"
+        const auth =  env.AUTH
         let browser
         try {
            browser = await puppeteer.connect({
